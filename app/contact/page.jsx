@@ -29,21 +29,24 @@ const ContactPage = () => {
     {
       icon: Phone,
       title: 'Phone',
-      primary: '+91 135 123 4567',
-      secondary: '+91 135 987 6543',
-      link: 'tel:+911351234567'
+      primary: '+91 7895872139',
+      secondary: '+91 9412143346',
+      link: 'tel:+917895872139'
+
+      
+
     },
     {
       icon: Mail,
       title: 'Email',
-      primary: 'info@paeconstruction.com',
+      primary: 'paeconstructionindian@gmail.com',
       secondary: 'projects@paeconstruction.com',
-      link: 'mailto:info@paeconstruction.com'
+      link: 'mailto:paeconstructionindian@gmail.com'
     },
     {
       icon: MapPin,
       title: 'Address',
-      primary: '123 Construction Plaza',
+      primary: '7/2/1 CONVENT ROAD NEAR SBI MAIN BRANCH',
       secondary: 'Dehradun, Uttarakhand 248001',
       link: '#map'
     },
