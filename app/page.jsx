@@ -31,7 +31,7 @@ const HomePage = () => {
     { name: "Indian Railway", image: "/images/clients/indian_railway.png" },
     { name: "Ramada", image: "/images/clients/ramada.png" },
     {
-      name: "Uttarakhand Jal Nigam",
+      name: "UK Jal Nigam",
       image: "/images/clients/uttarakhand-jal-nigam.png",
     },
     {
@@ -39,6 +39,9 @@ const HomePage = () => {
       image: "/images/clients/uttarakhand-sasan.png",
     },
     { name: "Purkul Cafe", image: "/images/clients/purkul-cafe.png" },
+    { name: "Aketa Hotel", image: "/images/aketa.png" },
+    { name: "PNC", image: "/images/pnc.png" },
+    { name: "Uttarakhand", image: "/images/uk.png" },
   ];
 
   const slidesData = [
@@ -47,24 +50,32 @@ const HomePage = () => {
       imageSrc: "/images/modern-house.png", // Ensure this image exists in /public/images/
       altText: "Modern House Exterior",
       heading: "Crafting Modern Living Spaces",
+      description:
+        "Designing and constructing contemporary homes that blend style with comfort.",
     },
     {
       id: 2,
       imageSrc: "/images/hero2.jpg", // Placeholder: Add your own image to /public/images/
       altText: "Elegant Interior Design",
       heading: "Innovative Designs for Your Dream Home",
+      description:
+        "Bringing unique architectural visions to life with precision and creativity.",
     },
     {
       id: 3,
       imageSrc: "/images/cons.png", // Placeholder: Add your own image to /public/images/
       altText: "Dehradun City View",
       heading: "Building the Future of India's Landscape",
+      description:
+        "Shaping urban and rural environments with robust and sustainable construction.",
     },
     {
       id: 4,
       imageSrc: "/images/hero.jpg", // Placeholder: Add your own image to /public/images/
       altText: "Dehradun City View",
       heading: "Building the Future of India's Landscape",
+      description:
+        "Developing infrastructure and commercial spaces that stand the test of time.",
     },
   ];
 
@@ -137,15 +148,88 @@ const HomePage = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-slate-100 text-black min-h-screen flex flex-col items-center justify-between  pt-10 pb-10">
+      <section className="relative bg-slate-100 text-black lg:min-h-screen flex flex-col items-center justify-between">
         {/* Top Content */}
+        <div className="relative w-full overflow-hidden ">
+          <Swiper
+            // Install modules
+            modules={[Navigation, Pagination, Autoplay, EffectFade]}
+            spaceBetween={0} // No space between slides
+            slidesPerView={1} // Show one slide at a time
+            autoplay={{
+              delay: 3000, // 5 seconds delay
+              disableOnInteraction: false, // Keep autoplaying even if user interacts
+            }}
+            effect="fade"
+            loop={true} // Loop through slides
+            className="mySwiper" // Custom class for Swiper instance if needed for more specific styling
+          >
+            {slidesData.map((slide) => (
+              <SwiperSlide key={slide.id}>
+                <div className="relative w-full bg-slate-100 h-[400px] md:h-[550px] lg:h-[600px]">
+                  {/* Image component */}
+                  <Image
+                    src={slide.imageSrc}
+                    alt={slide.altText}
+                    layout="fill"
+                    objectFit="cover"
+                    quality={80}
+                    priority={slide.id === 1}
+                    className=" object-cover"
+                  />
 
-        <div className="w-full  max-w-7xl flex  md:gap-8 items-center">
+                  <div className="absolute bottom-0 bg-gradient-to-t from-black via-black/50 w-full to-transparent  flex flex-col py-14 md:py-0 p-8 md:p-12">
+                    <h1 className="text-white text-3xl md:text-5xl lg:text-6xl font-extrabold leading-6 drop-shadow-lg max-w-3xl">
+                      {slide.heading}
+                    </h1>
+                    <h1 className="text-gray-200 font-light py-2   leading-tight drop-shadow-lg max-w-3xl">
+                      {slide.description}
+                    </h1>
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="
+    mt-6
+    absolute
+    left-6             
+    md:left-auto     
+    md:right-[8rem]    
+    bottom-2          
+    md:bottom-[5rem] 
+    z-50
+    px-6
+    rounded-full
+    py-2
+    bg-gradient-to-t from-blue-500 via-purple-500 to-pink-500
+    text-white
+    text-lg
+    font-semibold
+  "
+          >
+            Contact Us
+          </motion.button>
+          {/* Bottom Scroll Badge - positioned relative to the parent container of Swiper */}
+          {/* <div className="absolute bottom-[-30px] right-3 md:right-16 z-20">
+            <div className="w-20 h-20 rounded-full bg-white border border-gray-300 flex flex-col items-center justify-center text-[12px] font-bold tracking-wide text-center leading-tight shadow-md">
+              SCROLL
+              <br />
+              DOWN
+              <ArrowDown className="h-4 w-4 mt-1 text-gray-700" />
+            </div>
+          </div> */}
+        </div>
+
+        <div className="w-full  max-w-6xl flex py-10 md:py-16 md:gap-4 items-center">
           {/* Left Vertical Text */}
           <div className="hidden lg:flex font-montserrat font-bold text-gray-500 w-[10rem] flex-col items-start justify-center text-left text-xl  tracking-widest  transform origin-left whitespace-nowrap">
-            <span>THE PROCESS OF</span>
-            <span>CREATING</span>
-            <span>BUILDINGS</span>
+            <span>FOUNDATIONS</span>
+            <span>OF</span>
+            <span>QUALITY</span>
           </div>
 
           {/* Center Headline & CTA */}
@@ -172,72 +256,29 @@ const HomePage = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="mt-6 px-6 py-2 bg-gradient-to-t from-blue-500 via-purple-500 to-pink-500 text-white rounded-full text-lg font-semibold"
+              className="mt-6 hidden md:block px-6 py-2 bg-gradient-to-t from-blue-500 via-purple-500 to-pink-500 text-white rounded-full text-lg font-semibold"
             >
               Contact Us
             </motion.button>
           </div>
 
           {/* Right Circle Text Element */}
-          <div className="hidden  lg:flex w-fit justify-center items-center">
+          <div className="hidden lg:flex font-montserrat font-bold text-gray-500 w-[10rem] flex-col items-start justify-center text-left text-xl  tracking-widest  transform origin-left whitespace-nowrap">
+            <span>FROM </span>
+            <span>BLUEPRINT TO </span>
+            <span>REALITY</span>
+          </div>
+          {/* <div className="hidden  lg:flex w-fit justify-center items-center">
             <div className="w-28 h-28 rounded-full border border-black flex items-center justify-center text-xs font-light text-center ">
               <ArrowDown className="w-10 h-10 animate-pulse" />
             </div>
-          </div>
+          </div> */}
         </div>
 
         {/* House Image */}
-        <div className="relative w-full overflow-hidden md:mt-2">
-          <Swiper
-            // Install modules
-            modules={[Navigation, Pagination, Autoplay, EffectFade]}
-            spaceBetween={0} // No space between slides
-            slidesPerView={1} // Show one slide at a time
-            autoplay={{
-              delay: 5000, // 5 seconds delay
-              disableOnInteraction: false, // Keep autoplaying even if user interacts
-            }}
-            effect="fade"
-            loop={true} // Loop through slides
-            className="mySwiper" // Custom class for Swiper instance if needed for more specific styling
-          >
-            {slidesData.map((slide) => (
-              <SwiperSlide key={slide.id}>
-                <div className="relative w-full bg-slate-100 h-[400px] md:h-[550px] lg:h-[700px]">
-                  {/* Image component */}
-                  <Image
-                    src={slide.imageSrc}
-                    alt={slide.altText}
-                    layout="fill" // Fill the parent div
-                    objectFit="cover" // Cover the area, cropping if necessary
-                    quality={80}
-                    priority={slide.id === 1} // Prioritize the first image for LCP
-                    className="" // Apply rounded corners to the image
-                  />
-
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent  flex items-end p-8 md:p-12">
-                    <h1 className="text-white text-3xl md:text-5xl lg:text-6xl font-extrabold leading-tight drop-shadow-lg max-w-3xl">
-                      {slide.heading}
-                    </h1>
-                  </div>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-
-          {/* Bottom Scroll Badge - positioned relative to the parent container of Swiper */}
-          <div className="absolute bottom-[-30px] right-3 md:right-16 z-20">
-            <div className="w-20 h-20 rounded-full bg-white border border-gray-300 flex flex-col items-center justify-center text-[12px] font-bold tracking-wide text-center leading-tight shadow-md">
-              SCROLL
-              <br />
-              DOWN
-              <ArrowDown className="h-4 w-4 mt-1 text-gray-700" />
-            </div>
-          </div>
-        </div>
 
         {/* Keyword Tags */}
-        <div className=" flex flex-wrap justify-center gap-2 md:text-lg font-medium md:mt-5">
+        {/* <div className=" flex flex-wrap justify-center gap-2 md:text-lg font-medium md:mt-5">
           {[
             "Design Planning",
             "Structure",
@@ -252,11 +293,12 @@ const HomePage = () => {
               {tag}
             </span>
           ))}
-        </div>
+        </div> */}
       </section>
 
+      <ArchitectureSection />
       {/* Trusted Clients */}
-      <section className="py-10 md:py-16 bg-white border-b border-gray-200">
+      <section className="py-10 md:py-16 bg-slate-100 border-b border-gray-200">
         <div className="container-max section-padding">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -274,7 +316,7 @@ const HomePage = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 md:gap-8 items-center justify-center">
+          <div className="flex flex-wrap gap-6 justify-center items-center">
             {trustedClients.map((client, index) => (
               <motion.div
                 key={index}
@@ -286,7 +328,7 @@ const HomePage = () => {
                   ease: "easeInOut",
                 }}
                 viewport={{ once: true }}
-                className="flex flex-col items-center justify-center p-4 bg-white rounded-md shadow-sm hover:shadow-md transition-shadow duration-300"
+                className="flex flex-col items-center justify-items-center justify-center p-4 bg-slate-100 rounded-md shadow-sm hover:shadow-md transition-shadow duration-300"
               >
                 <div className="relative w-20 h-12 md:w-24 md:h-16 flex items-center justify-center mb-2">
                   <Image
@@ -301,31 +343,6 @@ const HomePage = () => {
                 <p className="text-xs md:text-sm font-medium text-gray-700 text-center">
                   {client.name}
                 </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-      <ArchitectureSection />
-
-      {/* Stats Section */}
-      <section className="py-20 bg-black text-white">
-        <div className="container-max section-padding">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <stat.icon className="h-12 w-12 mx-auto mb-4 text-white" />
-                <h3 className="text-3xl md:text-4xl font-bold mb-2 font-montserrat">
-                  {stat.number}
-                </h3>
-                <p className="text-white/80 font-quicksand">{stat.label}</p>
               </motion.div>
             ))}
           </div>
@@ -401,7 +418,13 @@ const HomePage = () => {
                 className="w-full h-[400px] object-cover"
               />
               <div className="absolute -bottom-8 md:-left-8 left-0 bg-black text-white p-6">
-                <p className="text-2xl font-bold font-montserrat">15+ Years</p>
+                <p className="text-2xl font-bold font-montserrat">
+                  {" "}
+                  <span className="bg-gradient-to-t from-blue-500 via-purple-500 to-pink-500 text-transparent bg-clip-text">
+                    15+
+                  </span>
+                  Years
+                </p>
                 <p className="text-white/80 font-quicksand">of Excellence</p>
               </div>
             </motion.div>
@@ -419,6 +442,30 @@ const HomePage = () => {
                 <p className="text-white/80 font-quicksand">of Excellence</p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-20 bg-black text-white">
+        <div className="container-max section-padding">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <motion.div
+                key={stat.label}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <stat.icon className="h-12 w-12 mx-auto mb-4 text-white" />
+                <h3 className="text-3xl md:text-4xl font-bold mb-2 font-montserrat">
+                  {stat.number}
+                </h3>
+                <p className="text-white/80 font-quicksand">{stat.label}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>

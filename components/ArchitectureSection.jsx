@@ -1,4 +1,5 @@
 import { ArrowUpRight, ArrowLeft } from "lucide-react";
+import Link from "next/link";
 
 const architectureCards = [
   {
@@ -33,9 +34,12 @@ const ArchitectureSection = () => {
     <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-10 mb-12">
-          <h2 className="hidden md:block text-3xl md:text-4xl font-semibold leading-tight text-gray-900">
+          <h2 className="hidden md:block leading-[10rem] text-3xl md:text-4xl font-semibold  text-gray-900">
             PAE Construction India offers efficient, client-focused
-            architectural and structural engineering solutions, backed by 7
+            architectural and structural engineering solutions, backed by{" "}
+            <span className="bg-gradient-to-t from-blue-500 via-purple-500 to-pink-500 text-transparent bg-clip-text">
+              7{" "}
+            </span>
             years of experience.
           </h2>
           <h2 className="block md:hidden text-4xl font-semibold leading-tight text-gray-900">
@@ -55,7 +59,7 @@ const ArchitectureSection = () => {
 
         <div className="grid gap-6 md:grid-cols-4 ">
           {/* Card 1 */}
-          <div className="bg-gray-900 rounded-2xl overflow-hidden shadow-md text-white">
+          <div className="inverted-radius bg-gray-900 overflow-hidden shadow-md text-white">
             <img
               src={architectureCards[0].image}
               alt=""
@@ -65,10 +69,14 @@ const ArchitectureSection = () => {
               <h4 className="text-lg font-semibold">
                 {architectureCards[0].title}
               </h4>
-              <div className="mt-2 flex justify-end">
-                <a href={architectureCards[0].link} className="text-white">
-                  <ArrowUpRight />
-                </a>
+              <div className="mt-2 flex py-1 border border-gray-500 cursor-pointer justify-end">
+                <h1>Contact Us</h1>
+                <Link
+                  href={"/contact"}
+                  className="text-white hover:text-gray-300 transition-colors"
+                >
+                  <ArrowUpRight size={24} /> {/* Adjust size if needed */}
+                </Link>
               </div>
             </div>
           </div>

@@ -211,7 +211,7 @@ const GalleryPage = () => {
                       alt={project.title}
                       width={400}
                       height={300}
-                      className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                      className="w-full h-64 object-cover transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center">
                       <motion.div

@@ -146,7 +146,7 @@ const ContactPage = () => {
           >
             <h2 className="heading-secondary mb-4">Get In Touch</h2>
             <p className="text-body text-gray-600 max-w-2xl mx-auto">
-              We're here to help with all your construction and engineering needs. 
+              We're here to <span className=' bg-gradient-to-l from-blue-500 via-purple-500 to-pink-500 text-transparent bg-clip-text'>help</span> with all your construction and engineering needs. 
               Reach out through any of the following channels.
             </p>
           </motion.div>
@@ -355,20 +355,25 @@ const ContactPage = () => {
               viewport={{ once: true }}
               className="space-y-8"
             >
-              <div>
-                <h3 className="heading-tertiary mb-6">Visit Our Office</h3>
-                <div id="map" className="bg-gray-200 h-64 flex items-center justify-center border">
-                  <div className="text-center text-gray-600">
-                    <MapPin className="h-12 w-12 mx-auto mb-2" />
-                    <p className="font-semibold font-montserrat">123 Construction Plaza</p>
-                    <p className="font-quicksand">Dehradun, Uttarakhand 248001</p>
-                    <p className="text-sm mt-2 font-quicksand">Interactive map would be embedded here</p>
-                  </div>
-                </div>
-              </div>
+<div>
+  <h3 className="heading-tertiary mb-6">Visit Our Office</h3>
+  <div id="map" className="h-64 w-full border"> {/* Adjusted h-64 for height and w-full for full width */}
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3444.094688359275!2d78.0460299!3d30.319824399999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390929caf86b89cf%3A0xf9252bb4392a1458!2sPAE%20Construction%20India%20(OPC)%20Pvt.%20Ltd.(Pal%20Architect%20And%20Engineer)!5e0!3m2!1sen!2sin!4v1751612072916!5m2!1sen!2sin"
+      width="100%"
+      height="100%"
+      style={{ border: 0 }}
+      allowFullScreen=""
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+      title="Office Location Map"
+      aria-label="Google Map showing the location of PAE Construction Office in Dehradun."
+    ></iframe>
+  </div>
+</div>
               
               <div className="bg-white p-8 border-l-4 border-black">
-                <h4 className="text-xl font-bold text-black mb-4 font-montserrat">Quick Response Guarantee</h4>
+                <h4 className="text-xl font-bold text-black mb-4 font-montserrat">Quick Response <span className=' bg-gradient-to-l from-blue-500 via-purple-500 to-pink-500 text-transparent bg-clip-text'>Guarantee</span></h4>
                 <p className="text-body text-gray-600 mb-4">
                   We understand that time is crucial in construction projects. That's why we guarantee:
                 </p>
@@ -401,7 +406,7 @@ const ContactPage = () => {
                   href="tel:+911359876543" 
                   className="text-2xl font-bold text-white hover:text-gray-300 transition-colors font-montserrat"
                 >
-                  +91 135 987 6543
+                  0135-4099051
                 </a>
               </div>
             </motion.div>
