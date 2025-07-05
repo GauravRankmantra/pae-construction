@@ -165,7 +165,7 @@ const HomePage = () => {
           >
             {slidesData.map((slide) => (
               <SwiperSlide key={slide.id}>
-                <div className="relative w-full bg-slate-100 h-[400px] md:h-[550px] lg:h-[85vh]">
+                <div className="relative w-full bg-slate-100 h-[600px] lg:h-[85vh]">
                   {/* Image component */}
                   <Image
                     src={slide.imageSrc}
@@ -178,7 +178,7 @@ const HomePage = () => {
                   />
 
                   <div className="absolute bottom-0 bg-gradient-to-t from-black via-black/50 w-full to-transparent  flex flex-col py-2 md:py-0 p-4 md:p-12">
-                    <h1 className="text-white text-3xl md:text-5xl lg:text-6xl font-extrabold leading-6 drop-shadow-lg max-w-3xl">
+                    <h1 className="text-white text-3xl md:text-5xl lg:text-6xl font-extrabold leading-10 drop-shadow-lg max-w-3xl">
                       {slide.heading}
                     </h1>
                     <h1 className="text-gray-200 font-light py-3 md:py-6 leading-tight drop-shadow-lg max-w-3xl">
