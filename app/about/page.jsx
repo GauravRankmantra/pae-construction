@@ -10,6 +10,7 @@ import {
   Building2,
 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const AboutPage = () => {
   const timeline = [
@@ -100,6 +101,28 @@ const AboutPage = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
+
+                <Link
+            href={"/contact"}
+            className="
+    mt-6
+    fixed     
+    md:right-[4rem]   
+    right-2 
+    bottom-2          
+    md:bottom-[2rem] 
+    z-50
+    px-6
+    rounded-full
+    py-2
+    bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500
+    text-white
+    text-lg
+    font-semibold
+  "
+          >
+            Contact Us
+          </Link>
       <section className="relative py-32 bg-black text-white overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <Image

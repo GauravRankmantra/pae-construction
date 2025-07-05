@@ -69,15 +69,15 @@ const ArchitectureSection = () => {
               <h4 className="text-lg font-semibold">
                 {architectureCards[0].title}
               </h4>
-              <div className="mt-2 flex py-1 border border-gray-500 cursor-pointer justify-end">
+              <Link
+                href={"/contact"}
+                className="mt-2 flex py-1 border border-gray-500 cursor-pointer justify-end"
+              >
                 <h1>Contact Us</h1>
-                <Link
-                  href={"/contact"}
-                  className="text-white hover:text-gray-300 transition-colors"
-                >
+                <h1 className="text-white hover:text-gray-300 transition-colors">
                   <ArrowUpRight size={24} /> {/* Adjust size if needed */}
-                </Link>
-              </div>
+                </h1>
+              </Link>
             </div>
           </div>
 

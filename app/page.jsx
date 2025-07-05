@@ -152,13 +152,12 @@ const HomePage = () => {
         {/* Top Content */}
         <div className="relative w-full overflow-hidden ">
           <Swiper
-           
             modules={[Navigation, Pagination, Autoplay, EffectFade]}
-            spaceBetween={0} 
-            slidesPerView={1} 
+            spaceBetween={0}
+            slidesPerView={1}
             autoplay={{
-              delay: 3000, 
-              disableOnInteraction: false, 
+              delay: 3000,
+              disableOnInteraction: false,
             }}
             effect="fade"
             loop={true} // Loop through slides
@@ -190,9 +189,8 @@ const HomePage = () => {
               </SwiperSlide>
             ))}
           </Swiper>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+          <Link
+            href={"/contact"}
             className="
     mt-6
     fixed     
@@ -211,7 +209,7 @@ const HomePage = () => {
   "
           >
             Contact Us
-          </motion.button>
+          </Link>
           {/* Bottom Scroll Badge - positioned relative to the parent container of Swiper */}
           {/* <div className="absolute bottom-[-30px] right-3 md:right-16 z-20">
             <div className="w-20 h-20 rounded-full bg-white border border-gray-300 flex flex-col items-center justify-center text-[12px] font-bold tracking-wide text-center leading-tight shadow-md">
@@ -342,7 +340,6 @@ const HomePage = () => {
         </div>
       </section>
       <ArchitectureSection />
-
 
       {/* Services Overview */}
       <section className="py-20 bg-white max-w-7xl mx-auto px-4">
