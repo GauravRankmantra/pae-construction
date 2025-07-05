@@ -148,17 +148,17 @@ const HomePage = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-slate-100 text-black lg:min-h-screen flex flex-col items-center justify-between">
+      <section className="relative bg-slate-100 text-black  flex flex-col items-center justify-between">
         {/* Top Content */}
         <div className="relative w-full overflow-hidden ">
           <Swiper
-            // Install modules
+           
             modules={[Navigation, Pagination, Autoplay, EffectFade]}
-            spaceBetween={0} // No space between slides
-            slidesPerView={1} // Show one slide at a time
+            spaceBetween={0} 
+            slidesPerView={1} 
             autoplay={{
-              delay: 3000, // 5 seconds delay
-              disableOnInteraction: false, // Keep autoplaying even if user interacts
+              delay: 3000, 
+              disableOnInteraction: false, 
             }}
             effect="fade"
             loop={true} // Loop through slides
@@ -166,7 +166,7 @@ const HomePage = () => {
           >
             {slidesData.map((slide) => (
               <SwiperSlide key={slide.id}>
-                <div className="relative w-full bg-slate-100 h-[400px] md:h-[550px] lg:h-[600px]">
+                <div className="relative w-full bg-slate-100 h-[400px] md:h-[550px] lg:h-[85vh]">
                   {/* Image component */}
                   <Image
                     src={slide.imageSrc}
@@ -178,11 +178,11 @@ const HomePage = () => {
                     className=" object-cover"
                   />
 
-                  <div className="absolute bottom-0 bg-gradient-to-t from-black via-black/50 w-full to-transparent  flex flex-col py-14 md:py-0 p-8 md:p-12">
+                  <div className="absolute bottom-0 bg-gradient-to-t from-black via-black/50 w-full to-transparent  flex flex-col py-2 md:py-0 p-4 md:p-12">
                     <h1 className="text-white text-3xl md:text-5xl lg:text-6xl font-extrabold leading-6 drop-shadow-lg max-w-3xl">
                       {slide.heading}
                     </h1>
-                    <h1 className="text-gray-200 font-light py-2   leading-tight drop-shadow-lg max-w-3xl">
+                    <h1 className="text-gray-200 font-light py-3 md:py-6 leading-tight drop-shadow-lg max-w-3xl">
                       {slide.description}
                     </h1>
                   </div>
@@ -195,17 +195,16 @@ const HomePage = () => {
             whileTap={{ scale: 0.95 }}
             className="
     mt-6
-    absolute
-    left-6             
-    md:left-auto     
-    md:right-[8rem]    
+    fixed     
+    md:right-[4rem]   
+    right-2 
     bottom-2          
-    md:bottom-[5rem] 
+    md:bottom-[2rem] 
     z-50
     px-6
     rounded-full
     py-2
-    bg-gradient-to-t from-blue-500 via-purple-500 to-pink-500
+    bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500
     text-white
     text-lg
     font-semibold
@@ -223,16 +222,16 @@ const HomePage = () => {
             </div>
           </div> */}
         </div>
-
+        {/* 
         <div className="w-full  max-w-6xl flex py-10 md:py-16 md:gap-4 items-center">
-          {/* Left Vertical Text */}
+        
           <div className="hidden lg:flex font-montserrat font-bold text-gray-500 w-[10rem] flex-col items-start justify-center text-left text-xl  tracking-widest  transform origin-left whitespace-nowrap">
             <span>FOUNDATIONS</span>
             <span>OF</span>
             <span>QUALITY</span>
           </div>
 
-          {/* Center Headline & CTA */}
+        
           <div className="text-center  w-full  flex flex-col items-center">
             <h1 className="text-4xl  sm:text-5xl tracking-wide  md:text-6xl lg:text-7xl font-bold  font-[Montserrat]">
               CONSTRUCTION
@@ -262,18 +261,14 @@ const HomePage = () => {
             </motion.button>
           </div>
 
-          {/* Right Circle Text Element */}
+        
           <div className="hidden lg:flex font-montserrat font-bold text-gray-500 w-[10rem] flex-col items-start justify-center text-left text-xl  tracking-widest  transform origin-left whitespace-nowrap">
             <span>FROM </span>
             <span>BLUEPRINT TO </span>
             <span>REALITY</span>
           </div>
-          {/* <div className="hidden  lg:flex w-fit justify-center items-center">
-            <div className="w-28 h-28 rounded-full border border-black flex items-center justify-center text-xs font-light text-center ">
-              <ArrowDown className="w-10 h-10 animate-pulse" />
-            </div>
-          </div> */}
-        </div>
+
+        </div> */}
 
         {/* House Image */}
 
@@ -295,8 +290,6 @@ const HomePage = () => {
           ))}
         </div> */}
       </section>
-
-      <ArchitectureSection />
       {/* Trusted Clients */}
       <section className="py-10 md:py-16 bg-slate-100 border-b border-gray-200">
         <div className="container-max section-padding">
@@ -316,7 +309,7 @@ const HomePage = () => {
             </p>
           </motion.div>
 
-          <div className="flex flex-wrap gap-6 justify-center items-center">
+          <div className="grid grid-cols-2 lg:grid-cols-5 gap-6 justify-center items-center">
             {trustedClients.map((client, index) => (
               <motion.div
                 key={index}
@@ -348,10 +341,12 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+      <ArchitectureSection />
+
 
       {/* Services Overview */}
-      <section className="py-20 bg-white">
-        <div className="container-max section-padding">
+      <section className="py-20 bg-white max-w-7xl mx-auto px-4">
+        <div className="">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
               initial={{ opacity: 0, x: -50 }}

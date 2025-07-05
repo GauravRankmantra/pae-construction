@@ -14,13 +14,13 @@ const Footer = () => {
   const googleMapsEmbedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3444.094688359275!2d78.0460299!3d30.319824399999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390929caf86b89cf%3A0xf9252bb4392a1458!2sPAE%20Construction%20India%20(OPC)%20Pvt.%20Ltd.(Pal%20Architect%20And%20Engineer)!5e0!3m2!1sen!2sin!4v1751612072916!5m2!1sen!2sin" 
   return (
     <footer className="bg-gray-950 text-gray-300 py-10">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 px-4 md:px-10">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 px-4 ">
         {/* Logo & Name */}
         <div>
           <img
             src="/images/logo.svg"
             alt="PAE Construction"
-            className="h-16 mb-3"
+            className="h-16 mb-3 -translate-x-3"
           />
           <h2 className="text-xl font-semibold">
             PAE CONSTRUCTION INDIAN OPC PVT LTD.

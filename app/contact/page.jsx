@@ -1,105 +1,104 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Clock, 
+import { useState } from "react";
+import { motion } from "framer-motion";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Clock,
   Send,
   Building2,
   User,
-  MessageSquare
-} from 'lucide-react';
-import Image from 'next/image';
+  MessageSquare,
+} from "lucide-react";
+import Image from "next/image";
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    subject: '',
-    projectType: '',
-    budget: '',
-    message: ''
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    projectType: "",
+    budget: "",
+    message: "",
   });
 
   const contactInfo = [
     {
       icon: Phone,
-      title: 'Phone',
-      primary: '+91 7895872139',
-      secondary: '+91 9412143346',
-      link: 'tel:+917895872139'
-
-      
-
+      title: "Phone",
+      primary: "+91 7895872139",
+      secondary: "+91 9412143346",
+      link: "tel:+917895872139",
     },
     {
       icon: Mail,
-      title: 'Email',
-      primary: 'paeconstructionindian@gmail.com',
-      secondary: 'projects@paeconstruction.com',
-      link: 'mailto:paeconstructionindian@gmail.com'
+      title: "Email",
+      primary: "paeconstructionindian@gmail.com",
+      secondary: "projects@paeconstruction.com",
+      link: "mailto:paeconstructionindian@gmail.com",
     },
     {
       icon: MapPin,
-      title: 'Address',
-      primary: '7/2/1 CONVENT ROAD NEAR SBI MAIN BRANCH',
-      secondary: 'Dehradun, Uttarakhand 248001',
-      link: '#map'
+      title: "Address",
+      primary: "7/2/1 CONVENT ROAD NEAR SBI MAIN BRANCH",
+      secondary: "Dehradun, Uttarakhand 248001",
+      link: "#map",
     },
     {
       icon: Clock,
-      title: 'Working Hours',
-      primary: 'Mon - Fri: 9:00 AM - 6:00 PM',
-      secondary: 'Sat: 9:00 AM - 1:00 PM',
-      link: null
-    }
+      title: "Working Hours",
+      primary: "Mon - Fri: 9:00 AM - 6:00 PM",
+      secondary: "Sat: 9:00 AM - 1:00 PM",
+      link: null,
+    },
   ];
 
   const projectTypes = [
-    'Residential Construction',
-    'Commercial Building',
-    'Industrial Facility',
-    'Renovation/Remodeling',
-    'Architectural Design',
-    'Engineering Consultation',
-    'Other'
+    "Residential Construction",
+    "Commercial Building",
+    "Industrial Facility",
+    "Renovation/Remodeling",
+    "Architectural Design",
+    "Engineering Consultation",
+    "Other",
   ];
 
   const budgetRanges = [
-    'Under ₹10 Lakhs',
-    '₹10 - 50 Lakhs',
-    '₹50 Lakhs - 1 Crore',
-    '₹1 - 5 Crores',
-    'Above ₹5 Crores',
-    'Prefer not to say'
+    "Under ₹10 Lakhs",
+    "₹10 - 50 Lakhs",
+    "₹50 Lakhs - 1 Crore",
+    "₹1 - 5 Crores",
+    "Above ₹5 Crores",
+    "Prefer not to say",
   ];
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission here
-    console.log('Form submitted:', formData);
-    alert('Thank you for your message! We will get back to you within 24 hours.');
+    console.log("Form submitted:", formData);
+    alert(
+      "Thank you for your message! We will get back to you within 24 hours."
+    );
     // Reset form
     setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      subject: '',
-      projectType: '',
-      budget: '',
-      message: ''
+      name: "",
+      email: "",
+      phone: "",
+      subject: "",
+      projectType: "",
+      budget: "",
+      message: "",
     });
   };
 
@@ -115,7 +114,7 @@ const ContactPage = () => {
             className="object-cover"
           />
         </div>
-        
+
         <div className="container-max section-padding relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -123,12 +122,11 @@ const ContactPage = () => {
             transition={{ duration: 0.8 }}
             className="max-w-4xl"
           >
-            <h1 className="heading-primary text-white mb-6">
-              Contact Us
-            </h1>
+            <h1 className="heading-primary text-white mb-6">Contact Us</h1>
             <p className="text-xl text-white/90 leading-relaxed">
-              Ready to start your next construction project? Get in touch with our team 
-              for a free consultation and let's bring your vision to life.
+              Ready to start your next construction project? Get in touch with
+              our team for a free consultation and let's bring your vision to
+              life.
             </p>
           </motion.div>
         </div>
@@ -146,11 +144,15 @@ const ContactPage = () => {
           >
             <h2 className="heading-secondary mb-4">Get In Touch</h2>
             <p className="text-body text-gray-600 max-w-2xl mx-auto">
-              We're here to <span className=' bg-gradient-to-l from-blue-500 via-purple-500 to-pink-500 text-transparent bg-clip-text'>help</span> with all your construction and engineering needs. 
-              Reach out through any of the following channels.
+              We're here to{" "}
+              <span className=" bg-gradient-to-l from-blue-500 via-purple-500 to-pink-500 text-transparent bg-clip-text">
+                help
+              </span>{" "}
+              with all your construction and engineering needs. Reach out
+              through any of the following channels.
             </p>
           </motion.div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {contactInfo.map((info, index) => (
               <motion.div
@@ -162,19 +164,25 @@ const ContactPage = () => {
                 className="text-center p-6 border border-gray-200 hover:border-black transition-colors duration-300 group"
               >
                 <info.icon className="h-12 w-12 mx-auto mb-4 text-black group-hover:scale-110 transition-transform duration-300" />
-                <h3 className="text-xl font-bold text-black mb-3 font-montserrat">{info.title}</h3>
+                <h3 className="text-xl font-bold text-black mb-3 font-montserrat">
+                  {info.title}
+                </h3>
                 <div className="space-y-1">
                   {info.link ? (
-                    <a 
+                    <a
                       href={info.link}
                       className="block text-body-small text-gray-600 hover:text-black transition-colors duration-300"
                     >
                       {info.primary}
                     </a>
                   ) : (
-                    <p className="text-body-small text-gray-600">{info.primary}</p>
+                    <p className="text-body-small text-gray-600">
+                      {info.primary}
+                    </p>
                   )}
-                  <p className="text-body-small text-gray-500">{info.secondary}</p>
+                  <p className="text-body-small text-gray-500">
+                    {info.secondary}
+                  </p>
                 </div>
               </motion.div>
             ))}
@@ -195,14 +203,17 @@ const ContactPage = () => {
             >
               <h3 className="heading-tertiary mb-6">Send Us a Message</h3>
               <p className="text-body text-gray-600 mb-8">
-                Fill out the form below and we'll get back to you as soon as possible 
-                with a detailed response about your project.
+                Fill out the form below and we'll get back to you as soon as
+                possible with a detailed response about your project.
               </p>
-              
+
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-semibold text-black mb-2 font-montserrat">
+                    <label
+                      htmlFor="name"
+                      className="block text-sm font-semibold text-black mb-2 font-montserrat"
+                    >
                       Full Name *
                     </label>
                     <div className="relative">
@@ -219,9 +230,12 @@ const ContactPage = () => {
                       />
                     </div>
                   </div>
-                  
+
                   <div>
-                    <label htmlFor="email" className="block text-sm font-semibold text-black mb-2 font-montserrat">
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-semibold text-black mb-2 font-montserrat"
+                    >
                       Email Address *
                     </label>
                     <div className="relative">
@@ -239,10 +253,13 @@ const ContactPage = () => {
                     </div>
                   </div>
                 </div>
-                
+
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-semibold text-black mb-2 font-montserrat">
+                    <label
+                      htmlFor="phone"
+                      className="block text-sm font-semibold text-black mb-2 font-montserrat"
+                    >
                       Phone Number
                     </label>
                     <div className="relative">
@@ -258,9 +275,12 @@ const ContactPage = () => {
                       />
                     </div>
                   </div>
-                  
+
                   <div>
-                    <label htmlFor="subject" className="block text-sm font-semibold text-black mb-2 font-montserrat">
+                    <label
+                      htmlFor="subject"
+                      className="block text-sm font-semibold text-black mb-2 font-montserrat"
+                    >
                       Subject
                     </label>
                     <input
@@ -274,10 +294,13 @@ const ContactPage = () => {
                     />
                   </div>
                 </div>
-                
+
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="projectType" className="block text-sm font-semibold text-black mb-2 font-montserrat">
+                    <label
+                      htmlFor="projectType"
+                      className="block text-sm font-semibold text-black mb-2 font-montserrat"
+                    >
                       Project Type
                     </label>
                     <div className="relative">
@@ -291,14 +314,19 @@ const ContactPage = () => {
                       >
                         <option value="">Select project type</option>
                         {projectTypes.map((type) => (
-                          <option key={type} value={type}>{type}</option>
+                          <option key={type} value={type}>
+                            {type}
+                          </option>
                         ))}
                       </select>
                     </div>
                   </div>
-                  
+
                   <div>
-                    <label htmlFor="budget" className="block text-sm font-semibold text-black mb-2 font-montserrat">
+                    <label
+                      htmlFor="budget"
+                      className="block text-sm font-semibold text-black mb-2 font-montserrat"
+                    >
                       Budget Range
                     </label>
                     <select
@@ -310,14 +338,19 @@ const ContactPage = () => {
                     >
                       <option value="">Select budget range</option>
                       {budgetRanges.map((range) => (
-                        <option key={range} value={range}>{range}</option>
+                        <option key={range} value={range}>
+                          {range}
+                        </option>
                       ))}
                     </select>
                   </div>
                 </div>
-                
+
                 <div>
-                  <label htmlFor="message" className="block text-sm font-semibold text-black mb-2 font-montserrat">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-semibold text-black mb-2 font-montserrat"
+                  >
                     Project Details *
                   </label>
                   <div className="relative">
@@ -334,7 +367,7 @@ const ContactPage = () => {
                     ></textarea>
                   </div>
                 </div>
-                
+
                 <motion.button
                   type="submit"
                   whileHover={{ scale: 1.05 }}
@@ -346,7 +379,7 @@ const ContactPage = () => {
                 </motion.button>
               </form>
             </motion.div>
-            
+
             {/* Map & Additional Info */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
@@ -355,27 +388,35 @@ const ContactPage = () => {
               viewport={{ once: true }}
               className="space-y-8"
             >
-<div>
-  <h3 className="heading-tertiary mb-6">Visit Our Office</h3>
-  <div id="map" className="h-64 w-full border"> {/* Adjusted h-64 for height and w-full for full width */}
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3444.094688359275!2d78.0460299!3d30.319824399999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390929caf86b89cf%3A0xf9252bb4392a1458!2sPAE%20Construction%20India%20(OPC)%20Pvt.%20Ltd.(Pal%20Architect%20And%20Engineer)!5e0!3m2!1sen!2sin!4v1751612072916!5m2!1sen!2sin"
-      width="100%"
-      height="100%"
-      style={{ border: 0 }}
-      allowFullScreen=""
-      loading="lazy"
-      referrerPolicy="no-referrer-when-downgrade"
-      title="Office Location Map"
-      aria-label="Google Map showing the location of PAE Construction Office in Dehradun."
-    ></iframe>
-  </div>
-</div>
-              
+              <div>
+                <h3 className="heading-tertiary mb-6">Visit Our Office</h3>
+                <div id="map" className="h-64 w-full border">
+                  {" "}
+                  {/* Adjusted h-64 for height and w-full for full width */}
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3444.094688359275!2d78.0460299!3d30.319824399999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390929caf86b89cf%3A0xf9252bb4392a1458!2sPAE%20Construction%20India%20(OPC)%20Pvt.%20Ltd.(Pal%20Architect%20And%20Engineer)!5e0!3m2!1sen!2sin!4v1751612072916!5m2!1sen!2sin"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen=""
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Office Location Map"
+                    aria-label="Google Map showing the location of PAE Construction Office in Dehradun."
+                  ></iframe>
+                </div>
+              </div>
+
               <div className="bg-white p-8 border-l-4 border-black">
-                <h4 className="text-xl font-bold text-black mb-4 font-montserrat">Quick Response <span className=' bg-gradient-to-l from-blue-500 via-purple-500 to-pink-500 text-transparent bg-clip-text'>Guarantee</span></h4>
+                <h4 className="text-xl font-bold text-black mb-4 font-montserrat">
+                  Quick Response{" "}
+                  <span className=" bg-gradient-to-l from-blue-500 via-purple-500 to-pink-500 text-transparent bg-clip-text">
+                    Guarantee
+                  </span>
+                </h4>
                 <p className="text-body text-gray-600 mb-4">
-                  We understand that time is crucial in construction projects. That's why we guarantee:
+                  We understand that time is crucial in construction projects.
+                  That's why we guarantee:
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-center text-body-small">
@@ -396,14 +437,17 @@ const ContactPage = () => {
                   </li>
                 </ul>
               </div>
-              
+
               <div className="bg-black text-white p-8">
-                <h4 className="text-xl font-bold text-white mb-4 font-montserrat">Emergency Support</h4>
+                <h4 className="text-xl font-bold text-white mb-4 font-montserrat">
+                  Emergency Support
+                </h4>
                 <p className="text-white/80 mb-4 font-quicksand">
-                  For urgent construction issues or emergency repairs, contact our 24/7 support line:
+                  For urgent construction issues or emergency repairs, contact
+                  our 24/7 support line:
                 </p>
-                <a 
-                  href="tel:+911359876543" 
+                <a
+                  href="tel:+911359876543"
                   className="text-2xl font-bold text-white hover:text-gray-300 transition-colors font-montserrat"
                 >
                   0135-4099051
@@ -424,30 +468,36 @@ const ContactPage = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="heading-secondary mb-4">Frequently Asked Questions</h2>
+            <h2 className="heading-secondary mb-4">
+              Frequently Asked Questions
+            </h2>
             <p className="text-body text-gray-600 max-w-2xl mx-auto">
               Find answers to common questions about our services and process
             </p>
           </motion.div>
-          
+
           <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
             {[
               {
-                question: 'How long does a typical project take?',
-                answer: 'Project timelines vary based on scope and complexity. Residential projects typically take 6-12 months, while commercial projects may take 12-18 months.'
+                question: "How long does a typical project take?",
+                answer:
+                  "Project timelines vary based on scope and complexity. Residential projects typically take 6-12 months, while commercial projects may take 12-18 months.",
               },
               {
-                question: 'Do you provide free estimates?',
-                answer: 'Yes, we provide free initial consultations and detailed estimates for all potential projects. This includes site visits and preliminary assessments.'
+                question: "Do you provide free estimates?",
+                answer:
+                  "Yes, we provide free initial consultations and detailed estimates for all potential projects. This includes site visits and preliminary assessments.",
               },
               {
-                question: 'What areas do you serve?',
-                answer: 'We primarily serve Dehradun and surrounding areas in Uttarakhand, including Haridwar, Rishikesh, and Mussoorie.'
+                question: "What areas do you serve?",
+                answer:
+                  "We primarily serve Dehradun and surrounding areas in Uttarakhand, including Haridwar, Rishikesh, and Mussoorie.",
               },
               {
-                question: 'Are you licensed and insured?',
-                answer: 'Yes, we are fully licensed, bonded, and insured. We maintain all necessary certifications and comply with local building codes and regulations.'
-              }
+                question: "Are you licensed and insured?",
+                answer:
+                  "Yes, we are fully licensed, bonded, and insured. We maintain all necessary certifications and comply with local building codes and regulations.",
+              },
             ].map((faq, index) => (
               <motion.div
                 key={index}
@@ -455,9 +505,11 @@ const ContactPage = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="p-6 border border-gray-200 hover:border-black transition-colors duration-300"
+                className="p-6 border border-gray-200  transition-colors duration-300"
               >
-                <h4 className="text-lg font-bold text-black mb-3 font-montserrat">{faq.question}</h4>
+                <h4 className="text-lg font-bold text-black mb-3 font-montserrat">
+                  {faq.question}
+                </h4>
                 <p className="text-body-small text-gray-600">{faq.answer}</p>
               </motion.div>
             ))}

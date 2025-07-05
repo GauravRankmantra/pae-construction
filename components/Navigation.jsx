@@ -40,7 +40,7 @@ const Navigation = () => {
       animate={{ y: 0 }}
       transition={{ duration: 0.6 }}
     >
-      <nav className="container-max section-padding">
+      <nav className="container-max ">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3 group">

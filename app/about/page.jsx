@@ -319,45 +319,58 @@ const AboutPage = () => {
             </p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-3 gap-12">
-            {team.map((member, index) => (
-              <motion.div
-                key={member.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                viewport={{ once: true }}
-                className="text-center group"
-              >
-                <div className="relative overflow-hidden mb-6">
-                  <Image
-                    src={member.image}
-                    alt={member.name}
-                    width={300}
-                    height={300}
-                    className="w-full h-80 object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-                  />
-                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-300" />
-                </div>
+<div className="grid lg:grid-cols-3 gap-12">
+  {team.map((member, index) => (
+    <motion.div
+      key={member.name}
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay: index * 0.2 }}
+      viewport={{ once: true }}
+      className="text-center group flex flex-col h-full"
+    >
+      <div className="relative overflow-hidden mb-6 flex-shrink-0">
+        <Image
+          src={member.image}
+          alt={member.name}
+          width={300}
+          height={300}
+          className="w-full h-80 object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+        />
+        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-300" />
+      </div>
 
-                <h3 className="text-2xl font-bold text-white mb-2 font-montserrat">
-                  {member.name}
-                </h3>
-                <p className="text-white/80 mb-2 font-semibold font-montserrat">
-                  {member.position}
-                </p>
-                <p className="text-white/60 text-sm mb-2 font-quicksand">
-                  {member.education}
-                </p>
-                <p className="text-white/60 text-sm mb-4 font-quicksand">
-                  {member.experience}
-                </p>
-                <blockquote className="text-white/80 italic font-quicksand">
-                  "{member.philosophy}"
-                </blockquote>
-              </motion.div>
-            ))}
-          </div>
+      {/* --- Key Change Here --- */}
+      {/* Assign a min-height to ensure consistent spacing for the name */}
+      <h3 className="text-2xl font-bold text-white mb-2 font-montserrat min-h-[56px] flex items-center justify-center">
+        {/*
+          min-h-[56px] is an example. You'll need to calculate this based on:
+          (2 * line-height_of_h3) + (2 * margin-top/bottom_of_h3) if any.
+          For 24px font, line-height is typically around 1.2-1.5, so 24*1.2 = 28.8px, 2 lines = 57.6px.
+          56px or 60px should be a good starting point.
+          flex items-center justify-center will vertically and horizontally center the name within this min-height
+          if it's shorter than two lines.
+        */}
+        {member.name}
+      </h3>
+      {/* --- End Key Change --- */}
+
+
+      <p className="text-white/80 mb-2 font-semibold font-montserrat">
+        {member.position}
+      </p>
+      <p className="text-white/60 text-sm mb-2 font-quicksand">
+        {member.education}
+      </p>
+      <p className="text-white/60 text-sm mb-4 font-quicksand">
+        {member.experience}
+      </p>
+      <blockquote className="text-white/80 italic font-quicksand mt-2">
+        "{member.philosophy}"
+      </blockquote>
+    </motion.div>
+  ))}
+</div>
         </div>
       </section>
 
