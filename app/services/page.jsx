@@ -24,6 +24,9 @@ const ServicesPage = () => {
         "Comprehensive architectural solutions from concept to completion",
       features: [
         "Conceptual Design & Planning",
+        "Architectural planning",
+        "city planning",
+        "town planning",
         "3D Modeling & Visualization",
         "Interior Design Solutions",
         "Sustainable Design Practices",
@@ -41,6 +44,9 @@ const ServicesPage = () => {
       features: [
         "Structural Analysis & Design",
         "Foundation Engineering",
+        "Steel design",
+        "Load-bearing calculation",
+        "Soil testing",
         "Seismic Design Solutions",
         "Load Calculations",
         "Material Specifications",
@@ -55,6 +61,7 @@ const ServicesPage = () => {
       description: "End-to-end project coordination and execution management",
       features: [
         "Project Planning & Scheduling",
+        "Project estimation and costing",
         "Resource Management",
         "Quality Control Systems",
         "Cost Management",
@@ -64,6 +71,7 @@ const ServicesPage = () => {
       image:
         "https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=800",
     },
+    
     {
       icon: Hammer,
       title: "Construction Services",
@@ -78,6 +86,19 @@ const ServicesPage = () => {
       ],
       image:
         "https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=800",
+    },
+     {
+      icon: ClipboardCheck,
+      title: "Valuer",
+      description: "End-to-end project coordination and execution management",
+      features: [
+        "Income tax valuations",
+        "Bank valuation",
+        "Property recognition and valuation"
+
+      ],
+      image:
+        "https://img.freepik.com/free-photo/business-man-financial-inspector-secretary-making-report-calculating-checking-balance-internal-revenue-service-inspector-checking-document-audit-concept_1423-126.jpg",
     },
   ];
 

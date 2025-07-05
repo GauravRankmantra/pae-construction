@@ -15,83 +15,83 @@ const GalleryPage = () => {
   const projects = [
     {
       id: 1,
-      title: 'Modern Villa Complex',
-      category: 'Residential',
+      title: 'DOON LORYAL COLLEGE',
+      category: 'Commercial',
       location: 'Dehradun',
       year: '2023',
-      image: 'https://images.pexels.com/photos/1029599/pexels-photo-1029599.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: '/images/gallery/doonl.png',
       description: 'Luxury residential complex with modern amenities and sustainable design.'
     },
     {
       id: 2,
-      title: 'Corporate Office Tower',
+      title: 'TOURIST REST HOUSE (TRH) KANVASHRAM FOR G.M.V.N',
       category: 'Commercial',
       location: 'Dehradun',
       year: '2023',
-      image: 'https://images.pexels.com/photos/280219/pexels-photo-280219.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: '/images/gallery/trh.png',
       description: 'State-of-the-art office building with innovative architectural design.'
     },
     {
       id: 3,
-      title: 'Manufacturing Facility',
+      title: ' RAIPUR POLICE STATION, DEHRADUN',
       category: 'Industrial',
-      location: 'Haridwar',
+      location: 'Dehradun',
       year: '2022',
-      image: 'https://images.pexels.com/photos/1078884/pexels-photo-1078884.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: '/images/gallery/police.png',
       description: 'Large-scale industrial facility with optimized workflow design.'
     },
     {
       id: 4,
-      title: 'Residential Apartments',
+      title: ' RESIDENCE AT CANAL ROAD, DEHRADUN',
       category: 'Residential',
-      location: 'Rishikesh',
+      location: 'Dehradun',
       year: '2022',
-      image: 'https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: '/images/gallery/res1.png',
       description: 'Multi-story residential complex with modern living spaces.'
     },
     {
       id: 5,
-      title: 'Shopping Mall',
-      category: 'Commercial',
+      title: 'BUILDING DESIGN FOR AT KALAGHAT NEAR, DEHRADUN',
+      category: 'Residential',
       location: 'Dehradun',
       year: '2021',
-      image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: '/images/gallery/res2.png',
       description: 'Contemporary shopping center with retail and entertainment facilities.'
     },
     {
       id: 6,
-      title: 'Highway Bridge',
-      category: 'Infrastructure',
+      title: ' HOUSE DESIGN AT NALAPANI, DEHRADUN',
+      category: 'Residential',
       location: 'Dehradun-Haridwar',
       year: '2021',
-      image: 'https://images.pexels.com/photos/3862132/pexels-photo-3862132.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: '/images/gallery/res3.png',
       description: 'Modern bridge construction enhancing regional connectivity.'
     },
     {
       id: 7,
-      title: 'Luxury Bungalow',
+      title: 'RESIDENTIAL FLATS DESIGN AT SARASWATI VIHAR',
       category: 'Residential',
       location: 'Mussoorie',
       year: '2020',
-      image: 'https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: '/images/gallery/res4.png',
       description: 'Premium hillside residence with panoramic mountain views.'
     },
     {
       id: 8,
-      title: 'Warehouse Complex',
-      category: 'Industrial',
+      title: 'COMMERCIAL BUILDING DESIGN AT,UTTAR PRADESH',
+      category: 'Commercial',
       location: 'Dehradun',
       year: '2020',
-      image: 'https://images.pexels.com/photos/3862132/pexels-photo-3862132.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image:  '/images/gallery/complex.png',
       description: 'Efficient storage and distribution facility with modern logistics design.'
     },
     {
       id: 9,
-      title: 'Bank Branch',
-      category: 'Commercial',
+      title: ' RESIDENTIAL BUILDING DESIGN FOR AT PANACHEVALLEY',
+      category: 'Residential',
       location: 'Dehradun',
       year: '2019',
-      image: 'https://images.pexels.com/photos/1078884/pexels-photo-1078884.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: '/images/gallery/res5.png',
       description: 'Modern banking facility with secure and customer-friendly design.'
     }
   ];

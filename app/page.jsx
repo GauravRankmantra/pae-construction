@@ -47,7 +47,7 @@ const HomePage = () => {
   const slidesData = [
     {
       id: 1,
-      imageSrc: "/images/modern-house.png", // Ensure this image exists in /public/images/
+      imageSrc: "/images/hero5.jpg", // Ensure this image exists in /public/images/
       altText: "Modern House Exterior",
       heading: "Crafting Modern Living Spaces",
       description:
@@ -63,7 +63,7 @@ const HomePage = () => {
     },
     {
       id: 3,
-      imageSrc: "/images/cons.png", // Placeholder: Add your own image to /public/images/
+      imageSrc: "/images/bul.jpg", // Placeholder: Add your own image to /public/images/
       altText: "Dehradun City View",
       heading: "Building the Future of India's Landscape",
       description:

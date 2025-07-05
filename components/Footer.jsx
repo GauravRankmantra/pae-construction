@@ -54,15 +54,15 @@ const Footer = () => {
           </p>
           <p className="mt-2 text-sm">
             <Phone className="inline mr-2" size={16} />
-            0135-4099051, 7895872139, 9412143346
+            0135-4099051, 7895297170 ,7895872139
           </p>
           <p className="text-sm mt-2">
             <Mail className="inline mr-2" size={16} />
             <a
-              href="mailto:paeconstructionindian@gmail.com"
+              href="mailto:contact@paearchindia.com"
               className="hover:text-white transition"
             >
-              paeconstructionindian@gmail.com
+              contact@paearchindia.com
             </a>
           </p>
           <div className="flex gap-4 mt-4">

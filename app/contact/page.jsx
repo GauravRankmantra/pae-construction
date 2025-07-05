@@ -30,15 +30,15 @@ const ContactPage = () => {
       icon: Phone,
       title: "Phone",
       primary: "+91 7895872139",
-      secondary: "+91 9412143346",
-      link: "tel:+917895872139",
+      secondary: "+91 7895297170",
+      link: "tel:+917895297170",
     },
     {
       icon: Mail,
       title: "Email",
-      primary: "paeconstructionindian@gmail.com",
-      secondary: "projects@paeconstruction.com",
-      link: "mailto:paeconstructionindian@gmail.com",
+      primary: "contact@paearchindia.com",
+      secondary: "",
+      link: "mailto:contact@paearchindia.com",
     },
     {
       icon: MapPin,
@@ -450,7 +450,7 @@ const ContactPage = () => {
                   href="tel:+911359876543"
                   className="text-2xl font-bold text-white hover:text-gray-300 transition-colors font-montserrat"
                 >
-                  0135-4099051
+                  7895297170
                 </a>
               </div>
             </motion.div>
