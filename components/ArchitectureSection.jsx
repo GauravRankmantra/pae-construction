@@ -17,7 +17,7 @@ const architectureCards = [
   {
     title: "Modern Villa",
     image: "/images/hero.jpg",
-    rating: "4.9",
+    rating: "4.9/5.0",
     customers: "980+ Customers",
   },
   {

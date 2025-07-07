@@ -11,7 +11,7 @@ const GalleryPage = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const categories = ['All', 'Residential', 'Commercial', 'Industrial', 'Infrastructure'];
+  const categories = ['All', 'Residential', 'Commercial', 'Industrial', 'Infrastructure','Landscape & Urban designing'];
 
   const projects = [
     {
@@ -26,7 +26,7 @@ const GalleryPage = () => {
     {
       id: 2,
       title: 'TOURIST REST HOUSE (TRH) KANVASHRAM FOR G.M.V.N',
-      category: 'Commercial',
+      category: 'Landscape & Urban designing',
       location: 'Dehradun',
       year: '2023',
       image: '/images/gallery/trh.png',
@@ -44,7 +44,7 @@ const GalleryPage = () => {
     {
       id: 4,
       title: ' RESIDENCE AT CANAL ROAD, DEHRADUN',
-      category: 'Residential',
+      category: 'Landscape & Urban designing',
       location: 'Dehradun',
       year: '2022',
       image: '/images/gallery/res1.png',
@@ -58,6 +58,15 @@ const GalleryPage = () => {
       year: '2021',
       image: '/images/gallery/res2.png',
       description: 'Contemporary shopping center with retail and entertainment facilities.'
+    },
+        {
+      id: 2,
+      title: 'TOURIST REST HOUSE (TRH) KANVASHRAM FOR G.M.V.N',
+      category: 'Commercial',
+      location: 'Dehradun',
+      year: '2023',
+      image: '/images/gallery/trh.png',
+      description: 'State-of-the-art office building with innovative architectural design.'
     },
     {
       id: 6,
@@ -361,7 +370,7 @@ const GalleryPage = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-4xl font-bold mb-2 font-montserrat">{projects.length}+</h3>
+              <h3 className="text-4xl font-bold mb-2 font-montserrat">50+</h3>
               <p className="text-white/80 font-quicksand">Projects Completed</p>
             </motion.div>
             
@@ -371,7 +380,7 @@ const GalleryPage = () => {
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-4xl font-bold mb-2 font-montserrat">4</h3>
+              <h3 className="text-4xl font-bold mb-2 font-montserrat">20+</h3>
               <p className="text-white/80 font-quicksand">Project Categories</p>
             </motion.div>
             
@@ -381,7 +390,7 @@ const GalleryPage = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-4xl font-bold mb-2 font-montserrat">98%</h3>
+              <h3 className="text-4xl font-bold mb-2 font-montserrat">100%</h3>
               <p className="text-white/80 font-quicksand">Client Satisfaction</p>
             </motion.div>
             

@@ -16,78 +16,214 @@ import Image from "next/image";
 import Link from "next/link";
 
 const ServicesPage = () => {
-  const mainServices = [
-    {
-      icon: PenTool,
-      title: "Architectural Design",
-      description:
-        "Comprehensive architectural solutions from concept to completion",
-      features: [
-        "Conceptual Design & Planning",
-        "Architectural planning",
-        "city planning",
-        "town planning",
-        "3D Modeling & Visualization",
-        "Interior Design Solutions",
-        "Sustainable Design Practices",
-        "Building Code Compliance",
-        "Construction Documentation",
-      ],
-      image:
-        "/images/7.jpg",
-    },
-    {
-      icon: Calculator,
-      title: "Structural Engineering",
-      description:
-        "Advanced engineering solutions ensuring safety and durability",
-      features: [
-        "Structural Analysis & Design",
-        "Foundation Engineering",
-        "Steel design",
-        "Load-bearing calculation",
-        "Soil testing",
-        "Seismic Design Solutions",
-        "Load Calculations",
-        "Material Specifications",
-        "Quality Assurance Testing",
-      ],
-      image:
-        "/images/Structural_Engineering.jpg",
-    },
-    {
-      icon: ClipboardCheck,
-      title: "Project Management",
-      description: "End-to-end project coordination and execution management",
-      features: [
-        "Project Planning & Scheduling",
-        "Project estimation and costing",
-        "Resource Management",
-        "Quality Control Systems",
-        "Cost Management",
-        "Risk Assessment",
-        "Progress Monitoring",
-      ],
-      image:
-        "https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=800",
-    },
-    
-    {
-      icon: Hammer,
-      title: "Construction Services",
-      description: "Professional construction execution with modern techniques",
-      features: [
-        "Residential Construction",
-        "Commercial Buildings",
-        "Industrial Facilities",
-        "Renovation & Remodeling",
-        "Site Preparation",
-        "Final Finishing Work",
-      ],
-      image:
-        "/images/Construction_Services.jpg",
-    },
-     {
+const mainServices = [
+  {
+    icon: ClipboardCheck,
+    title: "Site Survey and Analysis",
+    description:
+      "Accurate site assessment to inform smart design and construction decisions.",
+    features: [
+      "Topographical surveys",
+      "Site measurements and boundaries",
+      "Environmental impact assessments",
+      "Climatic and solar analysis",
+      "Soil and drainage investigation",
+      "Access and transportation analysis",
+    ],
+    image: "https://images.unsplash.com/photo-1723987251277-18fc0a1effd0?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    icon: PenTool,
+    title: "Architectural Programming",
+    description:
+      "Defining design goals, space needs, and functional requirements for successful project execution.",
+    features: [
+      "Client requirement analysis",
+      "Space and function allocation",
+      "Adjacency diagrams",
+      "Workflow and circulation study",
+      "Regulatory requirement mapping",
+    ],
+    image: "https://images.unsplash.com/photo-1727522974614-b592018e49e1?q=80&w=726&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    icon: Calculator,
+    title: "Built-form and Feasibility studies",
+    description:
+      "Analyzing potential development options for optimized site use and investment returns.",
+    features: [
+      "Site potential analysis",
+      "Development control norms review",
+      "Cost-benefit analysis",
+      "Building envelope evaluation",
+      "Zoning and bylaw compliance",
+    ],
+    image: "https://images.unsplash.com/photo-1716840646010-e5622fd6683d?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    icon: PenTool,
+    title: "Concept and Schematic Design",
+    description:
+      "Creative design exploration to establish the foundation for the project’s spatial identity.",
+    features: [
+      "Mass development studies",
+      "Preliminary floor plans & elevations",
+      "Material & facade options",
+      "3D visualizations",
+      "Client review presentations",
+    ],
+    image: "https://images.pexels.com/photos/439391/pexels-photo-439391.jpeg",
+  },
+  {
+    icon: ClipboardCheck,
+    title: "Tender Documentation (DPR)",
+    description:
+      "Comprehensive project reports and documents required for contractor bidding and approval.",
+    features: [
+      "Detailed Project Report (DPR) creation",
+      "Scope of work documents",
+      "Technical specifications",
+      "BOQ and cost estimates",
+      "Bidding process support",
+    ],
+    image: "https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg",
+  },
+  {
+    icon: Hammer,
+    title: "Construction Drawings and Documentation",
+    description:
+      "Precise technical drawings to guide construction and ensure design intent is met on-site.",
+    features: [
+      "Working drawings",
+      "Service layout drawings (MEP)",
+      "Structural details",
+      "Wall sections and elevations",
+      "Reflected ceiling plans",
+    ],
+    image: "https://images.unsplash.com/photo-1603901622056-0a5bee231395?q=80&w=1162&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    icon: ClipboardCheck,
+    title: "Architectural Site Supervision",
+    description:
+      "On-site design supervision to ensure quality, accuracy, and adherence to the architectural vision.",
+    features: [
+      "Regular site visits",
+      "Design intent verification",
+      "Workmanship checks",
+      "Coordination with contractors",
+      "Issue resolution and change management",
+    ],
+    image: "https://images.pexels.com/photos/5854195/pexels-photo-5854195.jpeg",
+  },
+  {
+    icon: PenTool,
+    title: "Housing Development",
+    description:
+      "Planning and designing livable, sustainable housing communities for urban and suburban contexts.",
+    features: [
+      "Master planning for residential zones",
+      "Affordable housing design",
+      "Multi-family dwellings",
+      "Circulation and green space planning",
+    ],
+    image: "https://images.pexels.com/photos/439391/pexels-photo-439391.jpeg",
+  },
+  {
+    icon: PenTool,
+    title: "Urban Design",
+    description:
+      "Creating functional, beautiful, and people-centered urban environments through holistic planning.",
+    features: [
+      "Urban revitalization plans",
+      "Streetscape & public realm design",
+      "Transit-oriented development",
+      "Zoning & policy review",
+    ],
+    image: "https://images.unsplash.com/photo-1587260704881-fff9988fda80?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    icon: Calculator,
+    title: "Spatial Design",
+    description:
+      "Designing innovative and responsive interior and exterior spaces that enrich user experience.",
+    features: [
+      "Flow and movement optimization",
+      "Multifunctional spaces",
+      "Furniture layout planning",
+      "Lighting & ambiance integration",
+    ],
+    image: "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg",
+  },
+  {
+    icon: PenTool,
+    title: "Landscape Design",
+    description:
+      "Integrating built form with nature through aesthetically appealing and ecologically sound designs.",
+    features: [
+      "Hardscape & softscape planning",
+      "Plantation strategies",
+      "Water bodies & features",
+      "Outdoor furniture and lighting",
+    ],
+    image: "https://images.pexels.com/photos/2246476/pexels-photo-2246476.jpeg",
+  },
+  {
+    icon: PenTool,
+    title: "Interior Design",
+    description:
+      "Curating interiors that balance aesthetics, function, and lifestyle with meticulous detailing.",
+    features: [
+      "Material selection",
+      "Custom furniture design",
+      "Theme-based styling",
+      "Lighting design",
+      "Color palettes & textures",
+    ],
+    image: "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg",
+  },
+  {
+    icon: ClipboardCheck,
+    title: "Interior Furniture Selection & Details",
+    description:
+      "Detailed selection and design of furniture pieces to complement interiors perfectly.",
+    features: [
+      "Custom furniture design",
+      "Ergonomic assessment",
+      "Finish & material selection",
+      "Joinery and detailing",
+    ],
+    image: "https://images.pexels.com/photos/1866149/pexels-photo-1866149.jpeg",
+  },
+  {
+    icon: Hammer,
+    title: "Sustainable and Green Building Designs",
+    description:
+      "Eco-conscious architectural practices to reduce environmental impact and improve efficiency.",
+    features: [
+      "Passive cooling techniques",
+      "Solar & rainwater systems",
+      "Material reuse and recycling",
+      "Energy-efficient systems",
+      "Green certification support (LEED, GRIHA)",
+    ],
+    image: "https://images.unsplash.com/photo-1556983852-43bf21186b2a?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    icon: ClipboardCheck,
+    title: "Conservation, Restoration, Adaptive reuse, Renovation of Built Structures",
+    description:
+      "Preserving architectural heritage and adapting existing structures for contemporary use.",
+    features: [
+      "Condition assessment and survey",
+      "Heritage restoration techniques",
+      "Structural retrofitting",
+      "Adaptive reuse strategies",
+      "Material preservation",
+    ],
+    image: "https://images.unsplash.com/photo-1643810771311-4f7108d7a280?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
       icon: ClipboardCheck,
       title: "Valuer",
       description: "End-to-end project coordination and execution management",
@@ -100,7 +236,8 @@ const ServicesPage = () => {
       image:
         "https://img.freepik.com/free-photo/business-man-financial-inspector-secretary-making-report-calculating-checking-balance-internal-revenue-service-inspector-checking-document-audit-concept_1423-126.jpg",
     },
-  ];
+];
+
 
   const specializedServices = [
     {
