@@ -78,7 +78,7 @@ const AboutPage = () => {
     },
     {
       name: "Ar.Rohini Pradhan",
-      position: "Chif Architect/Director",
+      position: "Cheif Architect / Director",
       education: "B.Arch",
       experience: "12+ years",
       image:

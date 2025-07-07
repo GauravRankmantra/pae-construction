@@ -34,7 +34,7 @@ const ServicesPage = () => {
         "Construction Documentation",
       ],
       image:
-        "https://images.pexels.com/photos/3862132/pexels-photo-3862132.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "/images/7.jpg",
     },
     {
       icon: Calculator,
@@ -53,7 +53,7 @@ const ServicesPage = () => {
         "Quality Assurance Testing",
       ],
       image:
-        "https://images.pexels.com/photos/1078884/pexels-photo-1078884.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "/images/Structural_Engineering.jpg",
     },
     {
       icon: ClipboardCheck,
@@ -85,7 +85,7 @@ const ServicesPage = () => {
         "Final Finishing Work",
       ],
       image:
-        "https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "/images/Construction_Services.jpg",
     },
      {
       icon: ClipboardCheck,
@@ -179,9 +179,9 @@ const ServicesPage = () => {
                 </Link>
       {/* Hero Section */}
       <section className="relative py-32 bg-black text-white overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
+        <div className="absolute inset-0 opacity-40">
           <Image
-            src="https://images.pexels.com/photos/3862132/pexels-photo-3862132.jpeg?auto=compress&cs=tinysrgb&w=1920"
+            src="/images/712.jpg"
             alt="Services background"
             fill
             className="object-cover"

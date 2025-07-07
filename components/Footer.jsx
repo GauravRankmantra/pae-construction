@@ -68,21 +68,21 @@ const Footer = () => {
           <div className="flex gap-4 mt-4">
             {/* Instagram */}
             <a
-              href="https://instagram.com/pae.construction"
+              href="https://www.instagram.com/pae.arch"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
             >
-              <Instagram size={24} className="hover:text-white transition" />
+              <Instagram size={24} className="hover:text-red-600 transition" />
             </a>
             {/* Facebook */}
             <a
-              href="https://facebook.com/constructionpae"
+              href="https://www.facebook.com/pae7895/?locale=ku_TR"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
             >
-              <Facebook size={24} className="hover:text-white transition" />
+              <Facebook size={24} className="hover:text-blue-700 transition" />
             </a>
 
             {/* WhatsApp (Add your WhatsApp number/link here) */}
@@ -96,7 +96,7 @@ const Footer = () => {
               {/* Replace with your actual WhatsApp number */}
               <MessageCircle
                 size={24}
-                className="hover:text-white transition"
+                className="hover:text-green-600 transition"
               />
             </a>
             {/* Add more social media icons as needed */}

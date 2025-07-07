@@ -86,63 +86,148 @@ const HomePage = () => {
     { icon: TrendingUp, number: "98%", label: "Client Satisfaction" },
   ];
 
-  const recentProjects = [
+  // const recentProjects = [
+  //   {
+  //     title: "DOON LORYAL COLLEGE",
+  //     category: "Commercial",
+  //     location: "Dehradun",
+  //     year: "2023",
+  //     image: "/images/gallery/doonl.png",
+  //     description:
+  //       "Luxury residential complex with modern amenities and sustainable design.",
+  //   },
+  //   {
+  //     title: "DESIGN AND RENOVATION OF RAIPUR POLICE STATION, DEHRADUN",
+  //     category: "Public Sector", // Corrected category for clarity
+  //     description:
+  //       "Undertook the comprehensive redesign and renovation of the Raipur Police Station, enhancing its functionality and public accessibility in Dehradun.",
+  //     image:
+  //       "https://images.pexels.com/photos/1029599/pexels-photo-1029599.jpeg?auto=compress&cs=tinysrgb&w=800",
+  //   },
+  //   {
+  //     title: "DESIGN AND CONSTRUCTION OF RESIDENCE AT CANAL ROAD, DEHRADUN",
+  //     category: "Residential", // Corrected category for clarity
+  //     description:
+  //       "Executed the design and construction of a bespoke residential property in Canal Road, Dehradun, focusing on contemporary living and efficiency.",
+  //     image:
+  //       "https://images.pexels.com/photos/1078884/pexels-photo-1078884.jpeg?auto=compress&cs=tinysrgb&w=800",
+  //   },
+  //   {
+  //     title: "RESIDENTIAL BUILDING DESIGN FOR AT KALAGHAT NEAR, DEHRADUN",
+  //     category: "Residential", // Corrected category for clarity
+  //     description:
+  //       "Provided innovative architectural design for a residential complex near Kalaghat, Dehradun, optimizing space and natural light for residents.",
+  //     image:
+  //       "https://images.pexels.com/photos/1078884/pexels-photo-1078884.jpeg?auto=compress&cs=tinysrgb&w=800",
+  //   },
+  //   {
+  //     title: "RESIDENTIAL BUILDING DESIGN FOR AT DEHRADUN",
+  //     category: "Residential", // Corrected category for clarity
+  //     description:
+  //       "Developed comprehensive design plans for a modern residential building in Dehradun, tailored to urban living standards and aesthetics.",
+  //     image:
+  //       "https://images.pexels.com/photos/1078884/pexels-photo-1078884.jpeg?auto=compress&cs=tinysrgb&w=800",
+  //   },
+  //   {
+  //     title: "COMMERCIAL COMPLEX DEVELOPMENT, DEHRADUN",
+  //     category: "Commercial",
+  //     description:
+  //       "Designed and developed a multi-story commercial complex, integrating retail and office spaces with modern amenities.",
+  //     image:
+  //       "https://images.pexels.com/photos/269077/pexels-photo-269077.jpeg?auto=compress&cs=tinysrgb&w=800",
+  //   },
+  //   {
+  //     title: "EDUCATIONAL INSTITUTION EXPANSION, DEHRADUN",
+  //     category: "Institutional",
+  //     description:
+  //       "Managed the expansion of a prominent educational institution, focusing on sustainable design and functional learning environments.",
+  //     image:
+  //       "https://images.pexels.com/photos/256468/pexels-photo-256468.jpeg?auto=compress&cs=tinysrgb&w=800",
+  //   },
+  // ];
+
+    const recentProjects = [
     {
-      title: "TOURIST REST HOUSE (TRH) KANVASHRAM FOR G.M.V.N",
-      category: "Commercial",
-      description:
-        "Designed a serene tourist rest house, blending modern comfort with the natural beauty of Kanvashram, providing a peaceful retreat for visitors.",
-      image:
-        "https://images.pexels.com/photos/280219/pexels-photo-280219.jpeg?auto=compress&cs=tinysrgb&w=800",
+      id: 1,
+      title: 'DOON LORYAL COLLEGE',
+      category: 'Commercial',
+      location: 'Dehradun',
+      year: '2023',
+      image: '/images/gallery/doonl.png',
+      description: 'Luxury residential complex with modern amenities and sustainable design.'
     },
     {
-      title: "DESIGN AND RENOVATION OF RAIPUR POLICE STATION, DEHRADUN",
-      category: "Public Sector", // Corrected category for clarity
-      description:
-        "Undertook the comprehensive redesign and renovation of the Raipur Police Station, enhancing its functionality and public accessibility in Dehradun.",
-      image:
-        "https://images.pexels.com/photos/1029599/pexels-photo-1029599.jpeg?auto=compress&cs=tinysrgb&w=800",
+      id: 2,
+      title: 'TOURIST REST HOUSE (TRH) KANVASHRAM FOR G.M.V.N',
+      category: 'Commercial',
+      location: 'Dehradun',
+      year: '2023',
+      image: '/images/gallery/trh.png',
+      description: 'State-of-the-art office building with innovative architectural design.'
     },
     {
-      title: "DESIGN AND CONSTRUCTION OF RESIDENCE AT CANAL ROAD, DEHRADUN",
-      category: "Residential", // Corrected category for clarity
-      description:
-        "Executed the design and construction of a bespoke residential property in Canal Road, Dehradun, focusing on contemporary living and efficiency.",
-      image:
-        "https://images.pexels.com/photos/1078884/pexels-photo-1078884.jpeg?auto=compress&cs=tinysrgb&w=800",
+      id: 3,
+      title: ' RAIPUR POLICE STATION, DEHRADUN',
+      category: 'Industrial',
+      location: 'Dehradun',
+      year: '2022',
+      image: '/images/gallery/police.png',
+      description: 'Large-scale industrial facility with optimized workflow design.'
     },
     {
-      title: "RESIDENTIAL BUILDING DESIGN FOR AT KALAGHAT NEAR, DEHRADUN",
-      category: "Residential", // Corrected category for clarity
-      description:
-        "Provided innovative architectural design for a residential complex near Kalaghat, Dehradun, optimizing space and natural light for residents.",
-      image:
-        "https://images.pexels.com/photos/1078884/pexels-photo-1078884.jpeg?auto=compress&cs=tinysrgb&w=800",
+      id: 4,
+      title: ' RESIDENCE AT CANAL ROAD, DEHRADUN',
+      category: 'Residential',
+      location: 'Dehradun',
+      year: '2022',
+      image: '/images/gallery/res1.png',
+      description: 'Multi-story residential complex with modern living spaces.'
     },
     {
-      title: "RESIDENTIAL BUILDING DESIGN FOR AT DEHRADUN",
-      category: "Residential", // Corrected category for clarity
-      description:
-        "Developed comprehensive design plans for a modern residential building in Dehradun, tailored to urban living standards and aesthetics.",
-      image:
-        "https://images.pexels.com/photos/1078884/pexels-photo-1078884.jpeg?auto=compress&cs=tinysrgb&w=800",
+      id: 5,
+      title: 'BUILDING DESIGN FOR AT KALAGHAT NEAR, DEHRADUN',
+      category: 'Residential',
+      location: 'Dehradun',
+      year: '2021',
+      image: '/images/gallery/res2.png',
+      description: 'Contemporary shopping center with retail and entertainment facilities.'
     },
     {
-      title: "COMMERCIAL COMPLEX DEVELOPMENT, DEHRADUN",
-      category: "Commercial",
-      description:
-        "Designed and developed a multi-story commercial complex, integrating retail and office spaces with modern amenities.",
-      image:
-        "https://images.pexels.com/photos/269077/pexels-photo-269077.jpeg?auto=compress&cs=tinysrgb&w=800",
+      id: 6,
+      title: ' HOUSE DESIGN AT NALAPANI, DEHRADUN',
+      category: 'Residential',
+      location: 'Dehradun-Haridwar',
+      year: '2021',
+      image: '/images/gallery/res3.png',
+      description: 'Modern bridge construction enhancing regional connectivity.'
     },
     {
-      title: "EDUCATIONAL INSTITUTION EXPANSION, DEHRADUN",
-      category: "Institutional",
-      description:
-        "Managed the expansion of a prominent educational institution, focusing on sustainable design and functional learning environments.",
-      image:
-        "https://images.pexels.com/photos/256468/pexels-photo-256468.jpeg?auto=compress&cs=tinysrgb&w=800",
+      id: 7,
+      title: 'RESIDENTIAL FLATS DESIGN AT SARASWATI VIHAR',
+      category: 'Residential',
+      location: 'Mussoorie',
+      year: '2020',
+      image: '/images/gallery/res4.png',
+      description: 'Premium hillside residence with panoramic mountain views.'
     },
+    {
+      id: 8,
+      title: 'COMMERCIAL BUILDING DESIGN AT,UTTAR PRADESH',
+      category: 'Commercial',
+      location: 'Dehradun',
+      year: '2020',
+      image:  '/images/gallery/complex.png',
+      description: 'Efficient storage and distribution facility with modern logistics design.'
+    },
+    {
+      id: 9,
+      title: ' RESIDENTIAL BUILDING DESIGN FOR AT PANACHEVALLEY',
+      category: 'Residential',
+      location: 'Dehradun',
+      year: '2019',
+      image: '/images/gallery/res5.png',
+      description: 'Modern banking facility with secure and customer-friendly design.'
+    }
   ];
 
   return (
@@ -403,7 +488,7 @@ const HomePage = () => {
               className="relative hidden lg:block"
             >
               <Image
-                src="https://images.pexels.com/photos/3862132/pexels-photo-3862132.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="/images/339.jpg"
                 alt="Construction services"
                 width={600}
                 height={400}
