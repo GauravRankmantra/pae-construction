@@ -83,7 +83,7 @@ const HomePage = () => {
     { icon: Building2, number: "200+", label: "Projects Completed" },
     { icon: Users, number: "50+", label: "Team Members" },
     { icon: Award, number: "15+", label: "Years Experience" },
-    { icon: TrendingUp, number: "98%", label: "Client Satisfaction" },
+    { icon: TrendingUp, number: "100%", label: "Client Satisfaction" },
   ];
 
   // const recentProjects = [

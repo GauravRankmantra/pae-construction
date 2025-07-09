@@ -16,7 +16,7 @@ const Navigation = () => {
     { href: "/", label: "Home" },
     { href: "/about", label: "About Us" },
     { href: "/services", label: "Services" },
-    { href: "/gallery", label: "Gallery" },
+    { href: "/media", label: "Media" },
     // { href: '/careers', label: 'Careers' },
     { href: "/contact", label: "Contact Us" },
   ];
@@ -41,11 +41,11 @@ const Navigation = () => {
       transition={{ duration: 0.6 }}
     >
       <nav className="container-max ">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-24">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3 group">
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Image src={logo} alt="logo" className=" w-32 h-32"></Image>
+              <Image src={logo} alt="logo" className=" w-52 h-52"></Image>
             </motion.div>
           </Link>
 

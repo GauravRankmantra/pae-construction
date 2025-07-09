@@ -11,91 +11,184 @@ const GalleryPage = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const categories = ['All', 'Residential', 'Commercial', 'Industrial', 'Infrastructure'];
+  const categories = ['All', 'Residential', 'Commercial', 'Industrial', 'Infrastructure','Landscape' , 'Urban Designe'];
 
-  const projects = [
-    {
-      id: 1,
-      title: 'DOON LORYAL COLLEGE',
-      category: 'Commercial',
-      location: 'Dehradun',
-      year: '2023',
-      image: '/images/gallery/doonl.png',
-      description: 'Luxury residential complex with modern amenities and sustainable design.'
-    },
-    {
-      id: 2,
-      title: 'TOURIST REST HOUSE (TRH) KANVASHRAM FOR G.M.V.N',
-      category: 'Commercial',
-      location: 'Dehradun',
-      year: '2023',
-      image: '/images/gallery/trh.png',
-      description: 'State-of-the-art office building with innovative architectural design.'
-    },
-    {
-      id: 3,
-      title: ' RAIPUR POLICE STATION, DEHRADUN',
-      category: 'Industrial',
-      location: 'Dehradun',
-      year: '2022',
-      image: '/images/gallery/police.png',
-      description: 'Large-scale industrial facility with optimized workflow design.'
-    },
-    {
-      id: 4,
-      title: ' RESIDENCE AT CANAL ROAD, DEHRADUN',
-      category: 'Residential',
-      location: 'Dehradun',
-      year: '2022',
-      image: '/images/gallery/res1.png',
-      description: 'Multi-story residential complex with modern living spaces.'
-    },
-    {
-      id: 5,
-      title: 'BUILDING DESIGN FOR AT KALAGHAT NEAR, DEHRADUN',
-      category: 'Residential',
-      location: 'Dehradun',
-      year: '2021',
-      image: '/images/gallery/res2.png',
-      description: 'Contemporary shopping center with retail and entertainment facilities.'
-    },
-    {
-      id: 6,
-      title: ' HOUSE DESIGN AT NALAPANI, DEHRADUN',
-      category: 'Residential',
-      location: 'Dehradun-Haridwar',
-      year: '2021',
-      image: '/images/gallery/res3.png',
-      description: 'Modern bridge construction enhancing regional connectivity.'
-    },
-    {
-      id: 7,
-      title: 'RESIDENTIAL FLATS DESIGN AT SARASWATI VIHAR',
-      category: 'Residential',
-      location: 'Mussoorie',
-      year: '2020',
-      image: '/images/gallery/res4.png',
-      description: 'Premium hillside residence with panoramic mountain views.'
-    },
-    {
-      id: 8,
-      title: 'COMMERCIAL BUILDING DESIGN AT,UTTAR PRADESH',
-      category: 'Commercial',
-      location: 'Dehradun',
-      year: '2020',
-      image:  '/images/gallery/complex.png',
-      description: 'Efficient storage and distribution facility with modern logistics design.'
-    },
-    {
-      id: 9,
-      title: ' RESIDENTIAL BUILDING DESIGN FOR AT PANACHEVALLEY',
-      category: 'Residential',
-      location: 'Dehradun',
-      year: '2019',
-      image: '/images/gallery/res5.png',
-      description: 'Modern banking facility with secure and customer-friendly design.'
-    }
-  ];
+ const projects = [
+  // Residential (3)
+  {
+    id: 1,
+    title: 'RESIDENTIAL VILLAS AT SAHASTRADHARA',
+    category: 'Residential',
+    location: 'Dehradun',
+    year: '2023',
+    image: '/images/gallery/res1.png',
+    description: 'Premium hillside villas offering modern design with natural integration.',
+  },
+  {
+    id: 2,
+    title: 'LUXURY APARTMENTS AT VIJAY COLONY',
+    category: 'Residential',
+    location: 'Mussoorie',
+    year: '2022',
+    image: '/images/gallery/res2.png',
+    description: 'Spacious multi-unit apartments designed for comfort and sustainability.',
+  },
+  {
+    id: 3,
+    title: 'INDEPENDENT HOUSE AT RISHIKESH ROAD',
+    category: 'Residential',
+    location: 'Dehradun',
+    year: '2021',
+    image: '/images/gallery/res3.png',
+    description: 'Contemporary independent home with smart architecture.',
+  },
+
+  // Commercial (3)
+  {
+    id: 4,
+    title: 'CORPORATE OFFICE FOR TECH HUB',
+    category: 'Commercial',
+    location: 'Dehradun',
+    year: '2023',
+    image: '/images/gallery/doonl.png',
+    description: 'A high-performance workspace with energy-efficient systems.',
+  },
+  {
+    id: 5,
+    title: 'SHOWROOM COMPLEX AT EC ROAD',
+    category: 'Commercial',
+    location: 'Dehradun',
+    year: '2022',
+    image: '/images/gallery/complex.png',
+    description: 'Retail and service complex with wide accessibility and visibility.',
+  },
+  {
+    id: 6,
+    title: 'TOURIST REST HOUSE (TRH) AT KANVASHRAM',
+    category: 'Commercial',
+    location: 'Haridwar',
+    year: '2021',
+    image: '/images/gallery/trh.png',
+    description: 'Rest house designed for modern travel needs with eco sensibility.',
+  },
+
+  // Industrial (3)
+  {
+    id: 7,
+    title: 'INDUSTRIAL SHED AT SELAQUI',
+    category: 'Industrial',
+    location: 'Dehradun',
+    year: '2023',
+    image: '/images/gallery/police.png',
+    description: 'Heavy-duty industrial facility with clear-span steel structure.',
+  },
+  {
+    id: 8,
+    title: 'MANUFACTURING UNIT AT BAZPUR',
+    category: 'Industrial',
+    location: 'Uttarakhand',
+    year: '2022',
+    image: '/images/gallery/res4.png',
+    description: 'Smart manufacturing layout promoting operational efficiency.',
+  },
+  {
+    id: 9,
+    title: 'PACKAGING FACILITY IN PANTNAGAR',
+    category: 'Industrial',
+    location: 'Rudrapur',
+    year: '2021',
+    image: '/images/gallery/res5.png',
+    description: 'Clean and optimized industrial zone for packaging and logistics.',
+  },
+
+  // Infrastructure (3)
+  {
+    id: 10,
+    title: 'BRIDGE DESIGN AT RANIPOKHARI',
+    category: 'Infrastructure',
+    location: 'Dehradun',
+    year: '2023',
+    image: '/images/gallery/res3.png',
+    description: 'Steel-concrete bridge enhancing connectivity between districts.',
+  },
+  {
+    id: 11,
+    title: 'STORM WATER DRAINAGE DESIGN AT DOIWALA',
+    category: 'Infrastructure',
+    location: 'Dehradun',
+    year: '2022',
+    image: '/images/gallery/res4.png',
+    description: 'Urban flood management system for monsoon resilience.',
+  },
+  {
+    id: 12,
+    title: 'RURAL ROAD PLANNING AT YAMKESHWR',
+    category: 'Infrastructure',
+    location: 'Pauri Garhwal',
+    year: '2021',
+    image: '/images/gallery/res5.png',
+    description: 'Connecting isolated villages with climate-resilient roadways.',
+  },
+
+  // Landscape (3)
+  {
+    id: 13,
+    title: 'RESORT LANDSCAPE AT JHARIPANI',
+    category: 'Landscape',
+    location: 'Mussoorie',
+    year: '2023',
+    image: '/images/gallery/trh.png',
+    description: 'Scenic retreat design blending nature with comfort.',
+  },
+  {
+    id: 14,
+    title: 'URBAN PARK DEVELOPMENT AT NEHRU COLONY',
+    category: 'Landscape',
+    location: 'Dehradun',
+    year: '2022',
+    image: '/images/gallery/res1.png',
+    description: 'Lush public space for recreation and community events.',
+  },
+  {
+    id: 15,
+    title: 'TERRACE GARDEN AT MALL ROAD RESIDENCE',
+    category: 'Landscape',
+    location: 'Mussoorie',
+    year: '2021',
+    image: '/images/gallery/res2.png',
+    description: 'Compact rooftop greenspace with aesthetic lighting.',
+  },
+
+  // Urban Design (3)
+  {
+    id: 16,
+    title: 'URBAN COMPLEX AT CLOCK TOWER',
+    category: 'Urban Designe',
+    location: 'Dehradun',
+    year: '2023',
+    image: '/images/gallery/complex.png',
+    description: 'Mixed-use development integrating work, retail, and leisure.',
+  },
+  {
+    id: 17,
+    title: 'CITY CENTER REVITALIZATION PROJECT',
+    category: 'Urban Designe',
+    location: 'Dehradun',
+    year: '2022',
+    image: '/images/gallery/doonl.png',
+    description: 'Urban upgrade for walkability and sustainable mobility.',
+  },
+  {
+    id: 18,
+    title: 'PUBLIC SPACES MASTERPLAN FOR RISHIKESH',
+    category: 'Urban Designe',
+    location: 'Rishikesh',
+    year: '2021',
+    image: '/images/gallery/police.png',
+    description: 'Integrated masterplan for public utility and beautification.',
+  },
+];
+
 
   const filteredProjects = selectedCategory === 'All' 
     ? projects 
@@ -361,7 +454,7 @@ const GalleryPage = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-4xl font-bold mb-2 font-montserrat">{projects.length}+</h3>
+              <h3 className="text-4xl font-bold mb-2 font-montserrat">50+</h3>
               <p className="text-white/80 font-quicksand">Projects Completed</p>
             </motion.div>
             
@@ -371,7 +464,7 @@ const GalleryPage = () => {
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-4xl font-bold mb-2 font-montserrat">4</h3>
+              <h3 className="text-4xl font-bold mb-2 font-montserrat">20+</h3>
               <p className="text-white/80 font-quicksand">Project Categories</p>
             </motion.div>
             
@@ -381,7 +474,7 @@ const GalleryPage = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-4xl font-bold mb-2 font-montserrat">98%</h3>
+              <h3 className="text-4xl font-bold mb-2 font-montserrat">100%</h3>
               <p className="text-white/80 font-quicksand">Client Satisfaction</p>
             </motion.div>
             
