@@ -77,14 +77,14 @@ const AboutPage = () => {
         "Building structures that stand the test of time while fostering innovation in construction.",
     },
     {
-      name: "Ar.Rohini Pradhan",
-      position: "Cheif Architect / Director",
-      education: "B.Arch",
-      experience: "12+ years",
+      name: "Ar. Ambika Prashad Gupta",
+      position: "Manager",
+      education: "B.Arch, M.Arch, PhD (Architecture) - IIT Roorkee",
+      experience: "10+ years",
       image:
-        "https://images.pexels.com/photos/3778680/pexels-photo-3778680.jpeg?auto=compress&cs=tinysrgb&w=400",
+        "https://cdn.pixabay.com/photo/2022/06/21/08/57/male-7275452_1280.jpg",
       philosophy:
-        "Designing spaces that inspire and enhance human experiences through thoughtful architecture.",
+        "Fostering innovative and sustainable architectural solutions that harmonize with client vision and environmental responsibility.",
     },
     {
       name: "Er. Anil Chandra (G.M.)",
@@ -95,16 +95,6 @@ const AboutPage = () => {
         "https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=400",
       philosophy:
         "Excellence in execution through meticulous planning and seamless coordination.",
-    },
-    {
-      name: "Ar. Ambika Prashad Gupta",
-      position: "Manager",
-      education: "B.Arch, M.Arch, PhD (Architecture) - IIT Roorkee",
-      experience: "10+ years",
-      image:
-        "https://cdn.pixabay.com/photo/2022/06/21/08/57/male-7275452_1280.jpg",
-      philosophy:
-        "Fostering innovative and sustainable architectural solutions that harmonize with client vision and environmental responsibility.",
     },
   ];
 
@@ -352,7 +342,7 @@ const AboutPage = () => {
             </p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid lg:grid-cols-3 gap-12">
             {team.map((member, index) => (
               <motion.div
                 key={member.name}
