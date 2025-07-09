@@ -102,7 +102,7 @@ const AboutPage = () => {
       education: "B.Arch, M.Arch, PhD (Architecture) - IIT Roorkee",
       experience: "10+ years",
       image:
-        "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg",
+        "https://cdn.pixabay.com/photo/2022/06/21/08/57/male-7275452_1280.jpg",
       philosophy:
         "Fostering innovative and sustainable architectural solutions that harmonize with client vision and environmental responsibility.",
     },
