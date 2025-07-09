@@ -11,7 +11,7 @@ const GalleryPage = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const categories = ['All', 'Residential', 'Commercial', 'Industrial', 'Infrastructure','Landscape' , 'Urban Designe'];
+  const categories = ['All', 'Residential', 'Commercial', 'Industrial', 'Infrastructure','Landscape' , 'Urban Design'];
 
  const projects = [
   // Residential (3)
@@ -163,7 +163,7 @@ const GalleryPage = () => {
   {
     id: 16,
     title: 'URBAN COMPLEX AT CLOCK TOWER',
-    category: 'Urban Designe',
+    category: 'Urban Design',
     location: 'Dehradun',
     year: '2023',
     image: '/images/gallery/complex.png',
@@ -172,7 +172,7 @@ const GalleryPage = () => {
   {
     id: 17,
     title: 'CITY CENTER REVITALIZATION PROJECT',
-    category: 'Urban Designe',
+    category: 'Urban Design',
     location: 'Dehradun',
     year: '2022',
     image: '/images/gallery/doonl.png',
@@ -181,7 +181,7 @@ const GalleryPage = () => {
   {
     id: 18,
     title: 'PUBLIC SPACES MASTERPLAN FOR RISHIKESH',
-    category: 'Urban Designe',
+    category: 'Urban Design',
     location: 'Rishikesh',
     year: '2021',
     image: '/images/gallery/police.png',
